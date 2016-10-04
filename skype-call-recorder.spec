@@ -1,12 +1,11 @@
 Name:           skype-call-recorder
-Version:        0.10
+Version:        0.11b
 Release:        1%{?dist}
 Summary:        Recording tool for Skype Calls
-License:        GPL
+License:        GPLv2+
 URL:            http://atdot.ch/scr/
-Packager:       Jean-Luc Herren <jlh@gmx.ch>
 Group:          Applications/Internet
-Source0:        %{name}-%{version}.tar.bz2
+Source0:        https://github.com/jlherren/%{name}/archive/%{version}.tar.gz
 
 BuildRequires:  lame-devel
 BuildRequires:  id3lib-devel
@@ -40,6 +39,11 @@ make DESTDIR="%{buildroot}" install
 rm -rf "%{buildroot}"
 
 %changelog
+* Tue Oct  4 2016 Eugene Zamriy <eugene@zamriy.info> - 0.11b-1
+- Release 0.11b
+- Packager tag removed in accordance with Fedora Packaging Guidelines
+- License updated to GPLv2+
+
 * Mon Jul 7 2014 Gawain Lynch <gawain.lynch@gmail.com> - 0.10-1
 - Use RPM macros
 - Added changelog
